@@ -8,6 +8,9 @@ namespace Geekbrains
         private float _lengthFlay;
         private float _speedRotation;
 
+        public delegate void CaughtPlayerChange(object value);
+        public event CaughtPlayerChange CaughtPlayer;
+
         private void Awake()
         {
             _lengthFlay = Random.Range(1.0f, 5.0f);
@@ -17,6 +20,7 @@ namespace Geekbrains
         protected override void Interaction()
         {
             FirstPersonController.m_RunSpeed = 3;
+            CaughtPlayer?.Invoke(this);
         }
 
         public void Flay()

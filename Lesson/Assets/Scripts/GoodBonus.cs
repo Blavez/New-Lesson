@@ -14,7 +14,6 @@ namespace Geekbrains
             _material = GetComponent<Renderer>().material;
             _lengthFlay = Random.Range(1.0f, 5.0f);
         }
-
         protected override void Interaction()
         {
             value++;
