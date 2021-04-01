@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+using System;
+using System.IO;
 using UnityStandardAssets.Characters.FirstPerson;
+
 
 namespace Geekbrains
 {
@@ -8,21 +11,35 @@ namespace Geekbrains
         private float _lengthFlay;
         private float _speedRotation;
 
-        public delegate void CaughtPlayerChange(object value);
+        public delegate void CaughtPlayerChange();
         public event CaughtPlayerChange CaughtPlayer;
 
+        private void Add(CaughtPlayerChange f) 
+        {
+            CaughtPlayer += f;
+        } 
         private void Awake()
         {
-            _lengthFlay = Random.Range(1.0f, 5.0f);
-            _speedRotation = Random.Range(10.0f, 50.0f);
-        }
+            CameraShake method = new CameraShake();
+            _lengthFlay = UnityEngine.Random.Range(1.0f, 5.0f);
+            _speedRotation = UnityEngine.Random.Range(10.0f, 50.0f);
+            Add(method.CaughtPlayer2);
+            Add(method.Test);
 
+        }
         protected override void Interaction()
         {
-            FirstPersonController.m_RunSpeed = 3;
-            CaughtPlayer?.Invoke(this);
-        }
+            try
+            {
+                FirstPersonController.m_RunSpeed = 3;
+                CaughtPlayer?.Invoke();
+            }
 
+            catch (Exception exc) 
+            {
+                Debug.Log("Неизвестная ошибка");
+            }
+        }
         public void Flay()
         {
             transform.localPosition = new Vector3(transform.localPosition.x,
