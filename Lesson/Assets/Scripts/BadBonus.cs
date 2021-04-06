@@ -2,12 +2,14 @@
 using System;
 using System.IO;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 
 namespace Geekbrains
 {
     public sealed class BadBonus : InteractiveObject, IFlay, IRotation
     {
+        private Restart _restart;
         private float _lengthFlay;
         private float _speedRotation;
 
@@ -29,16 +31,16 @@ namespace Geekbrains
         }
         protected override void Interaction()
         {
-            try
-            {
+           
                 FirstPersonController.m_RunSpeed = 3;
                 CaughtPlayer?.Invoke();
-            }
-
-            catch (Exception exc) 
-            {
-                Debug.Log("Неизвестная ошибка");
-            }
+                _restart.RestartButton.gameObject.SetActive(true);
+                _restart.RestartButton.onClick.AddListener(RestartGame);
+        }
+        private void RestartGame()
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1.0f;
         }
         public void Flay()
         {

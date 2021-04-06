@@ -3684,7 +3684,7 @@ GameObject:
   - component: {fileID: 538235233}
   - component: {fileID: 538235232}
   m_Layer: 0
-  m_Name: Very good bonus (1)
+  m_Name: BadBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

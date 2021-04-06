@@ -15,7 +15,6 @@ namespace Geekbrains
         public void Test() 
         {
             Debug.Log("Вы проиграли");
-            SceneManager.LoadScene(0);
         }
     }
 }
