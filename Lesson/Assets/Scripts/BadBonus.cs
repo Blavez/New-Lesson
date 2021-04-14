@@ -27,15 +27,15 @@ namespace Geekbrains
             _speedRotation = UnityEngine.Random.Range(10.0f, 50.0f);
             Add(method.CaughtPlayer2);
             Add(method.Test);
+            _restart.RestartButton.gameObject.SetActive(false);
+            _restart.RestartButton.onClick.AddListener(RestartGame);
 
         }
         protected override void Interaction()
         {
-           
-                FirstPersonController.m_RunSpeed = 3;
-                CaughtPlayer?.Invoke();
-                _restart.RestartButton.gameObject.SetActive(true);
-                _restart.RestartButton.onClick.AddListener(RestartGame);
+            FirstPersonController.m_RunSpeed = 3;
+            CaughtPlayer?.Invoke();
+            _restart.RestartButton.gameObject.SetActive(true);
         }
         private void RestartGame()
         {

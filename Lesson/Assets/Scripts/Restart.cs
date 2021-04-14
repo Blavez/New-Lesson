@@ -1,34 +1,34 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Restart
+namespace Geekbrains
 {
-    private Button _restartButton;
-    private Canvas _canvas;
-    public Canvas Canvas
+    public class Restart
     {
-        get
+        private Button _restartButton;
+        private Canvas _canvas;
+        public Canvas Canvas
         {
-            if (_canvas == null)
+            get
             {
-                _canvas = Object.FindObjectOfType<Canvas>();
+                if (_canvas == null)
+                {
+                    _canvas = Object.FindObjectOfType<Canvas>();
+                }
+                return _canvas;
             }
-            return _canvas;
+        }
+        public Button RestartButton
+        {
+            get
+            {
+                if (_restartButton == null)
+                {
+                    var gameObject = Resources.Load<Button>("UI/RestartButton");
+                    _restartButton = Object.Instantiate(gameObject, Canvas.transform);
+                }
+                return _restartButton;
+            }
         }
     }
-    public Button RestartButton
-    {
-        get
-        {
-            if (_restartButton == null)
-            {
-                var gameObject = Resources.Load<Button>("UI/RestartButton");
-                _restartButton = Object.Instantiate(gameObject, Canvas.transform);
-            }
-
-            return _restartButton;
-        }
-    }
-
-
 }

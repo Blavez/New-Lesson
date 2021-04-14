@@ -35,8 +35,7 @@ namespace Geekbrains
 
         public void Flicker()
         {
-            _material.color = new Color(_material.color.r, _material.color.g, _material.color.b,
-                Mathf.PingPong(Time.time, 1.0f));
+                Mathf.PingPong(Time.time, 1.0f);
         }
 
 
