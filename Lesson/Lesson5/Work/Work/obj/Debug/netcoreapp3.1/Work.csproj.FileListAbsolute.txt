@@ -1,0 +1,13 @@
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.exe
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.deps.json
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.runtimeconfig.json
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.runtimeconfig.dev.json
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.dll
+C:\New\Lesson\Lesson5\Work\Work\bin\Debug\netcoreapp3.1\Work.pdb
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.csprojAssemblyReference.cache
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.AssemblyInfoInputs.cache
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.AssemblyInfo.cs
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.csproj.CoreCompileInputs.cache
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.dll
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.pdb
+C:\New\Lesson\Lesson5\Work\Work\obj\Debug\netcoreapp3.1\Work.genruntimeconfig.cache
